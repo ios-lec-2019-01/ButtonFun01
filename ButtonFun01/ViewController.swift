@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         subview.backgroundColor=UIColor.red
         but.backgroundColor=UIColor.yellow
     }
+    var k=0;
     var checked=false;
     @IBAction func but(_ sender: UIButton) {
         if(checked == false){
