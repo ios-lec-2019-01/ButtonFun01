@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var mylabel: UILabel!
     @IBOutlet weak var subview: UIView!
     @IBOutlet weak var but: UIButton!
+    var count = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,18 +27,19 @@ class ViewController: UIViewController {
     var k=0;
     var checked=false;
     @IBAction func but(_ sender: UIButton) {
+        count = count + 1
+        
         if(checked == false){
-            mylabel.text="Button Pressed 1"
+            mylabel.text = String(count)
             checked = true
             subview.backgroundColor=UIColor.blue
         }else if(checked == true){
-            mylabel.text="Button Pressed 2"
+            //mylabel.text="Button Pressed 2"
             checked = false
             subview.backgroundColor=UIColor.red
+             mylabel.text = String(count)
         }
     }
-    
-
 
 }
 
